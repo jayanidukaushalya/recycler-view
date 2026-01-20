@@ -3,13 +3,14 @@ package com.jayanidukaushalya.bucketlist;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import com.google.android.material.card.MaterialCardView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,8 +25,12 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        Button btnPlacesToGo = findViewById(R.id.button_places_to_go);
-        Button btnThingsToDo = findViewById(R.id.button_things_to_do);
+        setupClickListeners();
+    }
+
+    private void setupClickListeners() {
+        MaterialCardView btnPlacesToGo = findViewById(R.id.button_places_to_go);
+        MaterialCardView btnThingsToDo = findViewById(R.id.button_things_to_do);
 
         btnPlacesToGo.setOnClickListener(new View.OnClickListener() {
             @Override
