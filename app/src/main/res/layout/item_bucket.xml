@@ -4,12 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/layout_item"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:padding="4dp">
 
     <com.google.android.material.imageview.ShapeableImageView
         android:id="@+id/imageview_item"
-        android:layout_width="90dp"
-        android:layout_height="90dp"
+        android:layout_width="150dp"
+        android:layout_height="120dp"
         android:contentDescription="item image"
         android:scaleType="centerCrop"
         app:shapeAppearanceOverlay="@style/rounded_image_corners"
@@ -19,26 +20,28 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
+        android:layout_marginStart="16dp"
         android:layout_toEndOf="@id/imageview_item"
-        android:orientation="vertical"
-        android:padding="8dp">
+        android:orientation="vertical">
 
         <TextView
             android:id="@+id/textview_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="sans-serif-medium"
-            android:textSize="16sp"
-            tools:text="This is a sample Title" />
+            android:textColor="#272727"
+            android:textSize="18sp"
+            tools:text="1. This is a sample Title" />
 
         <TextView
             android:id="@+id/textview_description"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
+            android:layout_marginTop="8dp"
             android:fontFamily="sans-serif-light"
-            android:maxLines="2"
-            android:textSize="14sp"
+            android:maxLines="4"
+            android:textColor="#777777"
+            android:textSize="16sp"
             tools:text="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate" />
 
 

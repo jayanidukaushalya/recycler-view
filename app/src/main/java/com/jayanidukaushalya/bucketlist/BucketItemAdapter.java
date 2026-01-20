@@ -31,7 +31,7 @@ public class BucketItemAdapter extends RecyclerView.Adapter<BucketItemAdapter.Bu
 
     @Override
     public void onBindViewHolder(@NonNull BucketItemViewHolder holder, int position) {
-        holder.bind(items[position]);
+        holder.bind(items[position], position);
     }
 
     static class BucketItemViewHolder extends RecyclerView.ViewHolder {
@@ -46,9 +46,10 @@ public class BucketItemAdapter extends RecyclerView.Adapter<BucketItemAdapter.Bu
             description = itemView.findViewById(R.id.textview_description);
         }
 
-        public void bind(BucketItem item) {
+        public void bind(BucketItem item, int position) {
             image.setImageResource(item.getImage());
-            name.setText(item.getName());
+            String titleName = position + 1 + ". " + item.getName();
+            name.setText(titleName);
             description.setText(item.getDescription());
         }
     }
